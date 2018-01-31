@@ -16,10 +16,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MainApp {
     public static void main(String[] args) {
-        //test tanpa XML
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(VolumeKubus.class);
-        //AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationcontext.xml");
-        VolumeKubus vk = context.getBean(VolumeKubus.class);
+//        //test tanpa XML
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(VolumeKubus.class);
+//        VolumeKubus vk = context.getBean(VolumeKubus.class);
+        //test dengan xml
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationcontext.xml");
+        VolumeKubus vk = (VolumeKubus) context.getBean("volumeKubus");
         System.out.println("Volume Kubus : "+vk.hitungVolume(10, 10, 10));
     }
 }
