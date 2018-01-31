@@ -14,13 +14,16 @@ import org.springframework.stereotype.Component;
  * @author St0rm
  */
 @Component
-//mungkin dia baca dari sini, kalau tanpa XML
-@ComponentScan(basePackages = "com.gmail.asboyo.latihanspringannotations.model")
 public class VolumeKubus {
     @Autowired
     private Persegi persegi;
+    @Autowired
+    private Lingkaran lingkaran;
     
     public double hitungVolume(int panjang, int lebar, int tinggi){
         return persegi.hitungLuas(panjang, lebar)*tinggi;
+    }
+    public double hitungVolumeLingkaran(int jari){
+        return lingkaran.hitungLuas(jari)*4/3*jari;
     }
 }
