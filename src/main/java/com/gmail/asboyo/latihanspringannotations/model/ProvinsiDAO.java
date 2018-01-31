@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
  *
  * @author St0rm
  */
-@Repository("provinsirepo")
+@Repository
 public class ProvinsiDAO {
     
     @Autowired
