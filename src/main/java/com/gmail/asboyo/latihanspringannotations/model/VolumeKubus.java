@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
  * @author St0rm
  */
 @Component
+//mungkin dia baca dari sini, kalau tanpa XML
 @ComponentScan(basePackages = "com.gmail.asboyo.latihanspringannotations.model")
 public class VolumeKubus {
     @Autowired
