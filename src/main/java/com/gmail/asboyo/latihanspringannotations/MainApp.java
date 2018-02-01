@@ -38,6 +38,18 @@ public class MainApp {
                                "ID provinsi : "+p.getIdProv()+" || "+
                                "Nama Provinsi : "+p.getNama_propinsi());
         }
+        //pdao.save(3, 62, "Provinsi Y");
+        //pdao.delete(1);
+        //pdao.update(2, 63, "Provinsi XYZ");
+        Provinsi p = pdao.getProvinsiByID(19);
+        System.out.println("id negara     : "+p.getId_negara());
+        System.out.println("id provinsi   : "+p.getIdProv());
+        System.out.println("nama provinsi : "+p.getNama_propinsi());
+        //
+        Provinsi pv = pdao.getByProvinsiByIDAlter("SUMATERA BARAT");
+        System.out.println("id negara     : "+pv.getId_negara());
+        System.out.println("id provinsi   : "+pv.getIdProv());
+        System.out.println("nama provinsi : "+pv.getNama_propinsi());
         context.close();
     }
 }

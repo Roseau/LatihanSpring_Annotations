@@ -5,15 +5,28 @@
  */
 package com.gmail.asboyo.latihanspringannotations.model;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author St0rm
  */
+@Component
 public class Provinsi {
     private int idProv;
     private int id_negara;
     private String nama_propinsi;
 
+    public Provinsi() {
+    }
+    
+    public Provinsi(int idProv, int id_negara, String nama_propinsi) {
+        this.idProv = idProv;
+        this.id_negara = id_negara;
+        this.nama_propinsi = nama_propinsi;
+    }
+    
     public Integer getIdProv() {
         return idProv;
     }
