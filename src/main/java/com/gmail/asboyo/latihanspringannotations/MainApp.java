@@ -9,6 +9,7 @@ import com.gmail.asboyo.latihanspringannotations.model.AppConfig;
 import com.gmail.asboyo.latihanspringannotations.model.Provinsi;
 import com.gmail.asboyo.latihanspringannotations.model.ProvinsiDAO;
 import com.gmail.asboyo.latihanspringannotations.model.VolumeKubus;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -50,6 +51,19 @@ public class MainApp {
         System.out.println("id negara     : "+pv.getId_negara());
         System.out.println("id provinsi   : "+pv.getIdProv());
         System.out.println("nama provinsi : "+pv.getNama_propinsi());
+//        //testing batch insert
+//        List<Provinsi> batch = new ArrayList<>();
+//        batch.add(new Provinsi(551,62,"Mockingjay"));
+//        batch.add(new Provinsi(550,62,"District 40"));
+//        batch.add(new Provinsi(570,62,"District 58"));
+//        System.out.println("count : "+pdao.saveBatch(batch));
+        //insert using map parameter
+        Provinsi prov = new Provinsi(780,62,"District 777");
+        //pdao.saveAlter(prov);
+        pdao.saveExecute(prov);
         context.close();
+        
+        
+        
     }
 }
